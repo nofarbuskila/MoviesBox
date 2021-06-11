@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    android:animateLayoutChanges="true"
+    android:layout_margin="20dp"
+    card_view:cardBackgroundColor="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/viewpager_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/viewpager_movie_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="mainFrame"
+            android:foreground="@drawable/movie_image_foreground"/>
+
+        <TextView
+            android:id="@+id/viewpager_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/viewpager_release_date_tv"
+            android:layout_margin="5dp"
+            android:textColor="#fff"
+            style="@style/review_dialog_txt"/>
+
+        <TextView
+            android:id="@+id/viewpager_release_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:textColor="#fff"
+            style="@style/review_dialog_txt"/>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

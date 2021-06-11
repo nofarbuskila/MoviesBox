@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@drawable/bg2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/username_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/email_tv"
+                android:layout_below="@id/username_tv"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profile_iv"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/email_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/bg3"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="4dp"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="20"
+                app:civ_shadow_color="@color/colorAccent"/>
+
+            <!--<ImageButton
+                android:id="@+id/update_profile_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/gender_tv"
+                android:layout_toEndOf="@id/profile_iv"
+                android:src="@drawable/image_24px"/>-->
+
+            <TextView
+                android:id="@+id/gender_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_iv"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:id="@+id/wishlist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gender_tv"
+                android:layout_marginTop="15dp"
+                android:text="Wishlist"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wishlist_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/wishlist_tv"/>
+
+            <TextView
+                android:id="@+id/watchlist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wishlist_rv"
+                android:layout_marginTop="15dp"
+                android:text="Watchlist"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/watchlist_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/watchlist_tv"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--<android.support.v7.widget.AppCompatButton
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="Edit Profile"
+        android:fontFamily="sans-serif-condensed-light"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"/>-->
+
+    <ProgressBar
+        android:id="@+id/profile_fragment_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"/>
+
+</RelativeLayout>

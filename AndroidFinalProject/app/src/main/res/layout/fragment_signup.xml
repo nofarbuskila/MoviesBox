@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    android:id="@+id/sign_up_relative_layout">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_blur"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_image_foreground"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo">
+
+        <RelativeLayout
+            android:id="@+id/login_and_register_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_name_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#fff">
+                <EditText
+                    android:id="@+id/first_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="First Name"
+                    android:inputType="text|textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/last_name_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_name_input_layout"
+                android:textColor="#fff"
+                android:textColorHint="#fff">
+                <EditText
+                    android:id="@+id/last_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Last Name"
+                    android:inputType="text|textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/last_name_input_layout"
+                android:textColor="#fff"
+                android:textColorHint="#fff">
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:inputType="text|textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/psw_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_input_layout"
+                android:textColor="#fff"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/psw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Password"
+                    android:inputType="text|textPassword"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/gender_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/psw_input_layout"
+                android:layout_marginTop="10dp"
+                android:checkedButton="@id/gender_other">
+
+                <RadioButton
+                    android:id="@+id/gender_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/gender_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:fontFamily="sans-serif-condensed-light"/>
+
+                <RadioButton
+                    android:id="@+id/gender_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:fontFamily="sans-serif-condensed-light"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="SIGN UP"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#fff"
+        android:layout_margin="20dp"
+        android:layout_below="@id/nested_scroll_view"/>
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/sign_up_btn">
+
+        <TextView
+            android:id="@+id/login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HAVE AN ACCOUNT?"
+            android:layout_marginEnd="5dp"
+            android:textColor="#fff"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/login_tv_clicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG IN!"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/login_tv"
+            android:clickable="true"
+            android:textColor="#000"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

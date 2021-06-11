@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/rev_dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="New Review"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rev_dialog_title_review_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_dialog_title_tv">
+
+            <EditText
+                android:id="@+id/rev_dialog_title_review_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title review..."
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="22sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rev_dialog_body_review_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_dialog_title_review_layout">
+
+            <EditText
+                android:id="@+id/rev_dialog_body_review_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Body review..."
+                android:inputType="textMultiLine"
+                android:lines="10"
+                android:minLines="3"
+                android:singleLine="false"
+                android:textColor="#000"
+                android:textSize="22sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/rev_rate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_dialog_body_review_layout1"
+            android:layout_margin="5dp"
+            android:text="Rate between 0 to 10:"
+            android:textSize="22sp"
+            style="@style/review_dialog_txt"/>
+
+        <EditText
+            android:id="@+id/rev_dialog_rate_review_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/rev_rate_tv"
+            android:layout_below="@id/rev_dialog_body_review_layout1"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/add_review_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_dialog_rate_review_et"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Add Review"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

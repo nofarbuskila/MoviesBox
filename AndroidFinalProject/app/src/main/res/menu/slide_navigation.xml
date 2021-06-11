@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Genres">
+        <menu>
+            <item android:id="@+id/nav_action"
+                android:icon="@drawable/crime_24px"
+                android:title="Action"/>
+
+            <item android:id="@+id/nav_adventure"
+                android:icon="@drawable/adventure_30px"
+                android:title="Adventure"/>
+
+            <item android:id="@+id/nav_animation"
+                android:icon="@drawable/animation_24px"
+                android:title="Animation"/>
+
+            <item android:id="@+id/nav_comedy"
+                android:icon="@drawable/comedy_24px"
+                android:title="Comedy"/>
+
+            <item android:id="@+id/nav_drama"
+                android:icon="@drawable/drama_24px"
+                android:title="Drama"/>
+
+            <item android:id="@+id/nav_family"
+                android:icon="@drawable/family_24px"
+                android:title="Family"/>
+
+            <item android:id="@+id/nav_fantasy"
+                android:icon="@drawable/witch_24px"
+                android:title="Fantasy" />
+
+            <item android:id="@+id/nav_history"
+                android:icon="@drawable/battle_24px"
+                android:title="History"/>
+
+            <item android:id="@+id/nav_romance"
+                android:icon="@drawable/novel_24px"
+                android:title="Romance"/>
+
+            <item android:id="@+id/nav_war"
+                android:icon="@drawable/tank_24px"
+                android:title="War" />
+        </menu>
+    </item>
+
+    <item android:title="General">
+        <menu>
+            <item android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Setting"/>
+
+            <item android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="Logout"/>
+        </menu>
+    </item>
+</menu>

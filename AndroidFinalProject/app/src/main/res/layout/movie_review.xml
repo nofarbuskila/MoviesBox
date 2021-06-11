@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:elevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/rev_star_iv"
+            style="@style/review_dialog_txt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_toStartOf="@id/rev_rate_tv"
+            android:src="@drawable/ic_star_black_24dp" />
+
+        <TextView
+            android:id="@+id/rev_title_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:maxLines="2"
+            android:text="review title" />
+
+        <TextView
+            android:id="@+id/rev_rate_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:text="7.8/10"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rev_written_by_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_title_tv"
+            android:layout_margin="5dp"
+            android:text="Written by"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rev_username_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_title_tv"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/rev_written_by_tv"
+            android:text="Nofar Buskila" />
+
+        <TextView
+            android:id="@+id/rev_on_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_title_tv"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/rev_username_tv"
+            android:text="on"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rev_date_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_title_tv"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/rev_on_tv"
+            android:text="02/07/2019"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rev_body_tv"
+            style="@style/review_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rev_written_by_tv"
+            android:layout_margin="5dp"
+            android:text="‘After’ is this weird blend of ‘Fifty Shades of Grey’ meets ‘Riverdale’ but never gets to the dumb fun both those are, nor does it have the sex appeal of those properties (there is a reason he is facing away from the camera on the poster). ‘After’ does not belong in cinemas nationwide; it’s even below Netflix's standards. It’s more of a YouTube original, or even just something to release on the Wattpad site for free. Still, the book’s sequels have been slated for production, so it looks like we’ll be suffering once again in 2020."
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

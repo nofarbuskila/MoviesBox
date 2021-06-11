@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/poster_iv"
+        android:layout_width="148dp"
+        android:layout_height="200dp"
+        android:transitionName="mainFrame"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/movie_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="26sp"
+        android:layout_toEndOf="@id/poster_iv"
+        style="@style/review_dialog_txt"
+        android:fontFamily="sans-serif-condensed-medium"/>
+
+
+    <TextView
+        android:id="@+id/movie_year_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_toEndOf="@id/poster_iv"
+        android:layout_below="@id/movie_title_tv"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        style="@style/review_dialog_txt"/>
+
+    <Button
+        android:id="@+id/add_to_wishlist_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wish_list_btn"
+        android:layout_toEndOf="@id/rate_layout"
+        android:layout_below="@id/movie_year_tv"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/add_to_watchlist_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/add_to_wishlist_btn"
+        android:layout_below="@id/movie_year_tv"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/watch_list_btn"/>
+
+    <RelativeLayout
+        android:id="@+id/rate_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/poster_iv"
+        android:layout_below="@id/movie_year_tv">
+
+        <TextView
+            android:id="@+id/movie_rate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            style="@style/review_dialog_txt"
+            android:text="7.5/10"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/rate_star_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/star_rating_icon2"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/movie_plot_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/poster_iv"
+        style="@style/review_dialog_txt"/>
+
+    <TextView
+        android:id="@+id/movie_reviews_genres_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="18sp"
+        android:layout_below="@id/movie_plot_tv"
+        android:text="Comedy, Action"
+        style="@style/review_dialog_txt"/>
+
+    <TextView
+        android:id="@+id/movie_reviews_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="22sp"
+        android:layout_below="@id/movie_reviews_genres_tv"
+        style="@style/review_dialog_txt"
+        android:text="Reviews:"
+        android:fontFamily="sans-serif-condensed-medium"/>
+
+
+
+
+</RelativeLayout>

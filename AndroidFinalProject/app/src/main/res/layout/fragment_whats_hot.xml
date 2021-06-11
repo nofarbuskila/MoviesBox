@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/discover_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discover"
+                style="@style/review_dialog_txt"
+                android:textSize="35sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/upcoming_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Up Coming"
+                style="@style/discoverPageText"
+                android:layout_below="@id/discover_tv"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upcoming_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upcoming_tv">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/top_rated_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top Rated"
+                android:layout_below="@id/upcoming_rv"
+                style="@style/discoverPageText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/top_rated_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_rated_tv">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/popular_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:layout_below="@id/top_rated_rv"
+                style="@style/discoverPageText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popular_tv">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/now_playing_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Now Playing"
+                android:layout_below="@id/popular_rv"
+                style="@style/discoverPageText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/now_playing_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/now_playing_tv">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
